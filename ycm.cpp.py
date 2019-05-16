@@ -56,37 +56,14 @@ flags = [
 # relevant for c++ headers.
 # For a C project, you would set this to 'c' instead of 'c++'.
 , '-x'
-, 'c++'
-, '-isystem'
-, '../BoostParts'
-, '-isystem'
-# This path will only work on OS X, but extra paths that don't exist are not
-# harmful
-, '/System/Library/Frameworks/Python.framework/Headers'
-, '-isystem'
-, '../llvm/include'
-, '-isystem'
-, '../llvm/tools/clang/include'
+, 'c++',
+'-isystem', '/usr/include/c++/7',
+'-isystem', '/usr/include/c++/7/x86_64-pc-linux-gnu',
+'-isystem', '/usr/include/c++/7/backward',
+'-isystem', '/usr/local/include',
+'-isystem', '/usr/include'
 , '-I'
 , '.'
-, '-I'
-, './ClangCompleter'
-, '-isystem'
-, './tests/gmock/gtest'
-, '-isystem'
-, './tests/gmock/gtest/include'
-, '-isystem'
-, './tests/gmock'
-, '-isystem'
-, './tests/gmock/include'
-, '-I'
-, '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1'
-, '-I'
-, '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1'
-, '-I'
-, '/usr/include'
-, '-I'
-, '/usr/local/include'
 ]
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
